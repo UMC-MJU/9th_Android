@@ -10,7 +10,7 @@
 
 **Title**: N주차미션_닉네임 (ex. 1주차미션_노코)
 
-**Reviewers(PR을 리뷰해 줄 팀원)**: 스터디원 (최소)1명
+**Reviewers(PR을 리뷰해 줄 팀원)**: 파트장
 
 **Assignees(PR 담당자)**: 본인
 
