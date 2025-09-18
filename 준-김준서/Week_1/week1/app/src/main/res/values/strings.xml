@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Week1App</string>
-    <string name="cd_happy">행복</string>
-    <string name="cd_excited">들뜸</string>
-    <string name="cd_normal">보통</string>
-    <string name="cd_anxious">불안</string>
-    <string name="cd_angry">분노</string>
-</resources>
