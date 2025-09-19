@@ -12,6 +12,7 @@
     <string name="cd_angry">분노</string>
     <string name="tv_angry">분노를 품거나 화가 나요</string>
     <string name="title">오늘 하루는 어땠나요?</string>
+    <string name="title2">감정우표를 선택해주세요</string>
     <string name="subtitle">선택한 감정우표를 기반으로 맞춤형 질문이 배달됩니다</string>
     <string name="back">뒤로가기</string>
     <string name="next">다음</string>
