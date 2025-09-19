@@ -38,9 +38,9 @@ Copyright © Sojung Park (Bei) All rights reserved.
 
 
 ## 🍀 Members
-| [![텍스트](https://avatars.githubusercontent.com/u/134688615?v=4)](https://github.com/JunSeo6233) |[![텍스트](https://avatars.githubusercontent.com/u/208924467?v=4)](https://github.com/starain-t1) |[![텍스트](https://avatars.githubusercontent.com/u/83599356?v=4)](https://github.com/rudtjr1106) |
-|:---:|:---:|:---:|
-| 준/김준서 | 이라/박재형 | 조나단/조경석 |
+| [![텍스트](https://avatars.githubusercontent.com/u/162302440?v=4)](https://github.com/JunSeo2001) |[![텍스트](https://avatars.githubusercontent.com/u/208924467?v=4)](https://github.com/starain-t1) |[![텍스트](https://avatars.githubusercontent.com/u/83599356?v=4)](https://github.com/rudtjr1106) |
+|:------------------------------------------------------------------------------------------:|:---:|:---:|
+|                                           준/김준서                                            | 이라/박재형 | 조나단/조경석 |
 
 <br>
 
