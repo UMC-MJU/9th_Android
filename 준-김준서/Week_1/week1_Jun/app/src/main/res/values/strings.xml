@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Application</string>
+<!--    <string name="app_name">Week1App</string>-->
+    <string name="cd_happy">행복</string>
+    <string name="tv_happy">더없이 행복한 하루였어요</string>
+    <string name="cd_excited">들뜸</string>
+    <string name="tv_excited">들뜨고 흥분돼요</string>
+    <string name="cd_normal">보통</string>
+    <string name="tv_normal">평범한 하루였어요</string>
+    <string name="cd_anxious">불안</string>
+    <string name="tv_anxious">생각이 많아지고 불안해요</string>
+    <string name="cd_angry">분노</string>
+    <string name="tv_angry">분노를 품거나 화가 나요</string>
+    <string name="title">오늘 하루는 어땠나요?</string>
+    <string name="title2">감정우표를 선택해주세요</string>
+    <string name="subtitle">선택한 감정우표를 기반으로 맞춤형 질문이 배달됩니다</string>
+    <string name="back">뒤로가기</string>
+    <string name="next">다음</string>
+</resources>
