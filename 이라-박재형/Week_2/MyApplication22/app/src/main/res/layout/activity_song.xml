@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    tools:context=".SongActivity">
+
+    <!-- Top Bar: Collapse, Title, Artist, More Options -->
+    <ImageButton
+        android:id="@+id/song_collapse_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Collapse or Back"
+        android:src="@drawable/ic_keyboard_arrow_down_placeholder" /> <!-- NEW ICON NEEDED -->
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/song_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Pop Song"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/song_collapse_btn"
+        app:layout_constraintEnd_toStartOf="@+id/song_more_options_btn"
+        app:layout_constraintTop_toTopOf="@id/song_collapse_btn"
+        app:layout_constraintBottom_toTopOf="@+id/song_artist_tv"/>
+
+    <TextView
+        android:id="@+id/song_artist_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kenshi Yonezu >"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="@id/song_title_tv"
+        app:layout_constraintEnd_toEndOf="@id/song_title_tv"
+        app:layout_constraintTop_toBottomOf="@id/song_title_tv"
+        app:layout_constraintBottom_toBottomOf="@id/song_collapse_btn"/>
+
+    <ImageButton
+        android:id="@+id/song_more_options_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="More options"
+        android:src="@drawable/ic_more_vert_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/song_collapse_btn"
+        app:layout_constraintBottom_toBottomOf="@id/song_collapse_btn" />
+
+    <!-- Album Art -->
+    <ImageView
+        android:id="@+id/song_album_art_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="Album Art"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_lost_corner_placeholder"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_collapse_btn" />
+
+    <!-- Lyrics Section (simplified) -->
+    <TextView
+        android:id="@+id/song_lyrics_tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="가사 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_album_art_iv" />
+
+    <TextView
+        android:id="@+id/song_lyrics_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="가사 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_lyrics_tv_1" />
+
+
+    <!-- Seekbar and Time -->
+    <TextView
+        android:id="@+id/song_current_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="00:00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_lyrics_tv_2" />
+
+    <SeekBar
+        android:id="@+id/song_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/song_current_time_tv"
+        app:layout_constraintEnd_toStartOf="@+id/song_total_time_tv"
+        app:layout_constraintStart_toEndOf="@id/song_current_time_tv"
+        app:layout_constraintTop_toTopOf="@id/song_current_time_tv" />
+
+    <TextView
+        android:id="@+id/song_total_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="03:27"
+        app:layout_constraintBottom_toBottomOf="@id/song_current_time_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/song_current_time_tv" />
+
+    <!-- Like / Block Buttons -->
+    <LinearLayout
+        android:id="@+id/song_actions_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/song_seekbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/song_like_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_favorite_border_placeholder"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="60dp"
+            android:contentDescription="Like song" />
+
+        <ImageButton
+            android:id="@+id/song_block_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_block_placeholder"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Block song" />
+    </LinearLayout>
+
+    <!-- Main Playback Controls -->
+    <LinearLayout
+        android:id="@+id/song_playback_controls_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/song_actions_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/song_shuffle_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_shuffle_placeholder"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Shuffle" />
+
+        <ImageButton
+            android:id="@+id/song_previous_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_skip_previous_placeholder"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous song" />
+
+        <ImageButton
+            android:id="@+id/song_play_pause_btn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1.2"
+            android:src="@drawable/ic_play_arrow_placeholder"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Play or Pause" />
+
+        <ImageButton
+            android:id="@+id/song_next_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_skip_next_placeholder"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Next song" />
+
+        <ImageButton
+            android:id="@+id/song_repeat_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_repeat_placeholder"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Repeat" />
+    </LinearLayout>
+
+    <!-- Bottom Bar: Instagram, Similar Songs, More Options -->
+    <ImageButton
+        android:id="@+id/song_instagram_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Instagram"
+        android:src="@drawable/ic_instagram_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_playback_controls_layout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/song_bottom_more_options_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_more_vert_placeholder"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="More options"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_playback_controls_layout"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/song_similar_songs_btn"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="유사곡"
+        app:layout_constraintBottom_toBottomOf="@id/song_bottom_more_options_btn"
+        app:layout_constraintEnd_toStartOf="@id/song_bottom_more_options_btn"
+        app:layout_constraintTop_toTopOf="@id/song_bottom_more_options_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
