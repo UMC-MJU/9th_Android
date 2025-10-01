@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/tab_home"    android:icon="@drawable/nav_icon_home"   android:title="홈"/>
+    <item android:id="@+id/tab_locker"  android:icon="@drawable/nav_icon_locker" android:title="보관함"/>
+    <item android:id="@+id/tab_look"    android:icon="@drawable/nav_icon_look"   android:title="둘러보기"/>
+    <item android:id="@+id/tab_search"  android:icon="@drawable/nav_icon_search" android:title="검색"/>
+</menu>

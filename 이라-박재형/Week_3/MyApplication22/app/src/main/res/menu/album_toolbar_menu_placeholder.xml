@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_album_like"
+        android:icon="@drawable/ic_like_album_placeholder"
+        android:title="Like"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_album_more"
+        android:icon="@drawable/ic_more_vert_placeholder"
+        android:title="More"
+        app:showAsAction="always" />
+</menu>
