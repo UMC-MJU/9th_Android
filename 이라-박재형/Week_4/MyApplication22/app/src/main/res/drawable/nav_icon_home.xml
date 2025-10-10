@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/ic_bottom_home_select"/>
+    <item android:drawable="@drawable/ic_bottom_home_select"/> <!-- 비선택용 이미지 없으면 동일 사용 -->
+</selector>
